@@ -41,8 +41,17 @@ public class Rubrica {
 			}
 		}
 	}
-
-	public void get_telefono(String nome, String cognome) {
+	
+	public void change_email(String nome,String cognome,String new_email) {
+		int i;
+		for (i = 0; i < contatti.size(); i++) {
+			if (nome.equals(contatti.get(i).nome) &&  cognome.equals(contatti.get(i).cognome)) {
+				contatti.get(i).email = new_email;
+			}
+		}
+	}
+	
+	public void get_telefono(String nome,String cognome) {
 		int i;
 		for (i = 0; i < contatti.size(); i++) {
 			if (nome.equals(contatti.get(i).nome) && cognome.equals(contatti.get(i).cognome)) {

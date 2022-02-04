@@ -61,6 +61,15 @@ public class Main {
 				telefono = sc.nextInt();
 				rubr.change_number(nome,cognome,telefono);
 				break;
+			case "changeemail":
+				System.out.print("Nome: ");
+				nome = sc.next();
+				System.out.print("Cognome: ");
+				cognome = sc.next();
+				System.out.print("Email: ");
+				email = sc.next();
+				rubr.change_email(nome, cognome, email);
+				break;
 			case ".":
 				rubr.save();
 				System.out.println("Programma terminato.");
@@ -73,4 +82,5 @@ public class Main {
 		sc.close();
 	}
 }
-//Questo è un testo
+//Questo è un test
+//Forse funziona
