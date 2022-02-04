@@ -32,30 +32,39 @@ public class Rubrica {
 	public void add(String nome, String cognome, int telefono, String email) {
 		contatti.add(new Contatto(nome, cognome, telefono, email));
 	}
-	
-	public void remove(String nome,String cognome) {
+
+	public void remove(String nome, String cognome) {
 		int i;
 		for (i = 0; i < contatti.size(); i++) {
-			if (nome.equals(contatti.get(i).nome) &&  cognome.equals(contatti.get(i).cognome)) {
+			if (nome.equals(contatti.get(i).nome) && cognome.equals(contatti.get(i).cognome)) {
 				contatti.remove(i);
 			}
 		}
 	}
-	
-	public void get_telefono(String nome,String cognome) {
+
+	public void get_telefono(String nome, String cognome) {
 		int i;
 		for (i = 0; i < contatti.size(); i++) {
-			if (nome.equals(contatti.get(i).nome) &&  cognome.equals(contatti.get(i).cognome)) {
+			if (nome.equals(contatti.get(i).nome) && cognome.equals(contatti.get(i).cognome)) {
 				System.out.println(contatti.get(i).telefono);
 			}
 		}
 	}
-	
-	public void get_email(String nome,String cognome) {
+
+	public void get_email(String nome, String cognome) {
 		int i;
 		for (i = 0; i < contatti.size(); i++) {
-			if (nome.equals(contatti.get(i).nome) &&  cognome.equals(contatti.get(i).cognome)) {
+			if (nome.equals(contatti.get(i).nome) && cognome.equals(contatti.get(i).cognome)) {
 				System.out.println(contatti.get(i).email);
+			}
+		}
+	}
+
+	public void change_number(String nome, String cognome, int new_num) {
+		int i;
+		for (i = 0; i < contatti.size(); i++) {
+			if (nome.equals(contatti.get(i).nome) && cognome.equals(contatti.get(i).cognome)) {
+				contatti.get(i).telefono = new_num;
 			}
 		}
 	}
